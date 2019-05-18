@@ -202,3 +202,46 @@ class LinkedList:
     def __repr__(self):
         return str([val for val in self])
 
+
+#%%
+# TESTS
+
+lst = LinkedList()
+lst.prepend("333")
+lst.prepend(3)
+lst.prepend(5)
+lst.traverse(to_print=True)
+
+#%%
+lst.append(8)
+lst.traverse(to_print=True)
+
+#%%
+temp = lst.pop()
+print('Popped item: {}'.format(temp))
+lst.traverse(to_print=True)
+
+#%%
+node = lst.search(8)
+node.value
+
+#%%
+lst.traverse(to_print=True)
+lst.remove(8)
+lst.traverse(to_print=True)
+
+#%%
+lst.size()
+
+#%%
+lst.insert(10, 1)
+lst.traverse(to_print=True)
+
+#%%
+lst = LinkedList()
+lst.append(3)
+lst.append(33)
+lst.append(4)
+lst.append(44)
+revd = lst.reverse()
+revd.traverse(to_print=True)
