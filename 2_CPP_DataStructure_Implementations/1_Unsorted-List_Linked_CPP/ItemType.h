@@ -1,11 +1,11 @@
 #ifndef ITEMTYPE_H
 #define ITEMTYPE_H
 
-#include <fstream>
+#include <fstream>      // included for file operations in ::Print() function
 
-const int MAX_ITEMS = 5;
+const int MAX_ITEMS = 5;    // defining MAX_ITEMS as a constant for holding the maximum size of the list
 
-enum RelationType {
+enum RelationType {     // defining an enum for the ComparedTo() method
     LESS,
     GREATER,
     EQUAL
@@ -13,12 +13,12 @@ enum RelationType {
 
 class ItemType {
     public:
-        ItemType();
-        explicit ItemType(int);
-        RelationType ComparedTo(ItemType&) const;
-        void Print(std::ofstream&) const;
+        ItemType();     // default constructor
+        explicit ItemType(int);     // alternative, parameterized constructor
+        RelationType ComparedTo(ItemType&) const;   // compared the value in current item to the value in another item (of ItemType)
+        void Print(std::ofstream&) const;   // prints value to standard output device
     private:
-        int value;
+        int value;      // private data member to hold the value included in the item
 };
 
 #endif // ITEMTYPE_H
