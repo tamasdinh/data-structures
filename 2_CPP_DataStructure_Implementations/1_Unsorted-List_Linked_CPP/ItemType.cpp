@@ -14,10 +14,10 @@ RelationType ItemType::ComparedTo(ItemType& otherItem) const {
     // compares the value in the current ItemType to the value in another ItemType
     if (value < otherItem.value)
         return LESS;
-    if (value == otherItem.value)
-        return EQUAL;
     if (value > otherItem.value)
         return GREATER;
+    else
+        return EQUAL;
 }
 
 void ItemType::Print(std::ofstream& out) const {

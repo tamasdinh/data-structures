@@ -2,13 +2,14 @@
 
 struct NodeType {
     ItemType data;
-    NodeType* next;
+    NodeType* next = nullptr;
 };
 
 UnsortedListLinked::UnsortedListLinked() {
     // Initializing list length to 0 and current headNode's pointer to NULL
     length = 0;
     headNode = nullptr;
+    currentPos = nullptr;
 }
 
 UnsortedListLinked::~UnsortedListLinked() {
@@ -78,7 +79,12 @@ ItemType UnsortedListLinked::getItem(ItemType item, bool &found) const {
 }
 
 void UnsortedListLinked::putItem(ItemType item) {
-
+    // the list being unsorted, we can add a new element simply at the beginning
+    NodeType* newNode = new NodeType();     // creating new node for item
+    newNode->data = item;                   // inserting item as data member to new node
+    newNode->next = headNode;               // connecting new node via next member to existing headNode
+    headNode = newNode;                     // assigning new node as headNode
+    length++;                               // incrementing length attribute of list
 }
 
 void UnsortedListLinked::deleteItem(ItemType item) {
