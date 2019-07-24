@@ -13,7 +13,7 @@ class UnsortedListLinked {
         bool isFull() const;    // determines whether the list has reached its maximum size - in the current
                                     // linked implementation, this means that there are no memory left in the free store
         int getLength() const;  // returns length of list (number of elements in list)
-        ItemType getItem(ItemType item, bool& found) const;    // returns item from list if exists
+        ItemType getItem(ItemType item) const;    // returns item from list if exists
         void putItem(ItemType item);    // insert item in list
         void deleteItem(ItemType item); // delete item from list
         void resetList();       // initializes current position in the list for any iterator

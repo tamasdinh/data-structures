@@ -20,11 +20,11 @@ RelationType ItemType::ComparedTo(ItemType& otherItem) const {
         return EQUAL;
 }
 
-void ItemType::Print(std::ofstream& out) const {
+void ItemType::Print() const {
     // prints value in current item to the standard output device
 
     // Preconditions: out has been opened
     // Post conditions: value has been sent to the stream out.
-    out << value << " ";
+    std::cout << value << " ";
 }
 

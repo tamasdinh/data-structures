@@ -57,10 +57,10 @@ int UnsortedListLinked::getLength() const {
     return length;
 }
 
-ItemType UnsortedListLinked::getItem(ItemType item, bool &found) const {
+ItemType UnsortedListLinked::getItem(ItemType item) const {
     // We traverse the list items and compare the data member of each node to the item sought
     NodeType* location = headNode;  // initialize the temporary node pointer variable to the headNode
-    found = false;
+    bool found = false;
     bool continueSearch = (location != nullptr);
     while (continueSearch && !found) {
        // while the boolean var continueSearch is true AND the item has not been found, the item sought is compared to
@@ -117,7 +117,7 @@ void UnsortedListLinked::resetList() {
 
 ItemType UnsortedListLinked::getNextItem() {
     // Simply returning the data member in the NodeType struct that the currentPos node's "next" data member points to
-    if (currentPos == nullptr)
+    if (currentPos == NULL)
         currentPos = headNode;
     else
         currentPos = currentPos->next;
