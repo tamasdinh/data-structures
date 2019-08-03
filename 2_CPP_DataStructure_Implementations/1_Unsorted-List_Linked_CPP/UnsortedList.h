@@ -1,7 +1,7 @@
 #ifndef UNSORTED_LIST_H
 #define UNSORTED_LIST_H
 
-#include "ItemType.h"
+#include "../0_Auxiliary/ItemType.h"
 
 struct NodeType;    // forward declaration for headNode in the linked list; implementation in .cpp file
 
