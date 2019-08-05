@@ -22,7 +22,7 @@ void ArrayCountedQueue::Enqueue(ItemType newItem) {
 void ArrayCountedQueue::Dequeue(ItemType &item) {
     // we can use Dequeue() from ArrayQueue but have to include it in a try-catch block to handle exceptions
     try {
-        ArrayQueue::Dequeue();
+        ArrayQueue::Dequeue(item);
         length_--;
     }
     catch (QueueEmpty) {
