@@ -1,25 +1,25 @@
 #ifndef ARRAYQUEUE_H
 #define ARRAYQUEUE_H
 
-#include "../0_Auxiliary/ItemType.h"
-
 class QueueFull {};
 
 class QueueEmpty {};
 
+template <typename T>
 class ArrayQueue {
     public:
         ArrayQueue();
         ArrayQueue(int);
+        ArrayQueue(ArrayQueue&);
         ~ArrayQueue();
         void MakeEmpty();
         bool IsEmpty() const;
         bool IsFull() const;
-        void Enqueue(ItemType);
-        void Dequeue(ItemType&);
+        void Enqueue(T);
+        T Dequeue(T&);
 
     private:
-        ItemType* items_;
+        T* items_;
         int max_queue_;
         int front_;
         int rear_;
