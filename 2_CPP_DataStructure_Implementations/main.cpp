@@ -214,7 +214,6 @@ int main() {
         std::cout << "Running MakeEmpty()..." << std::endl;
         queue.MakeEmpty();
         std::cout << "Is queue empty? " << queue.IsEmpty() << std::endl;
-*/
 
 
     // Exercise 18

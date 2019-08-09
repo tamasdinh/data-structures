@@ -2,13 +2,11 @@
 #define LINKEDQUEUE_H
 
 #include "../0_Auxiliary/ItemType.h"
+#include "../0_Auxiliary/QueueFull.h"
+#include "../0_Auxiliary/QueueEmpty.h"
 #include <iostream>
 
 struct NodeType;
-
-class QueueFull {};
-
-class QueueEmpty {};
 
 class LinkedQueue {
     public:

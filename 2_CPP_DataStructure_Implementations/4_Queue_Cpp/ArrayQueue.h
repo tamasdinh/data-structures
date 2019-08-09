@@ -1,9 +1,9 @@
 #ifndef ARRAYQUEUE_H
 #define ARRAYQUEUE_H
 
-class QueueFull {};
+#include "../0_Auxiliary/QueueFull.h"
+#include "../0_Auxiliary/QueueEmpty.h"
 
-class QueueEmpty {};
 
 template <typename T>
 class ArrayQueue {
