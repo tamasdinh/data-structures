@@ -1,10 +1,11 @@
 #include <iostream>
 #include "1_Unsorted-List_Linked_CPP/UnsortedList.h"
-#include "4_Queue_Cpp/LinkedQueue.h"
 #include "3_Stack_cpp/ArrayStack.h"
 #include "3_Stack_cpp/ArrayStack.cpp"
+#include "4_Queue_Cpp/LinkedQueue.h"
 #include "4_Queue_Cpp/ArrayQueue.h"
 #include "4_Queue_Cpp/ArrayQueue.cpp"
+#include "5_ListPlus/DoublyLinkedList.h"
 
 
 // Exercise 18
@@ -357,4 +358,26 @@ int main() {
         }
         std::cout << std::endl;
     }
+
+// DoublyLinkedList tests
+
+        DoublyLinkedList textList;
+
+        std::cout << (textList.IsEmpty()? "List is empty" : "List is not empty") << std::endl;
+        textList.GoToTop();
+        std::cout << "Inserting element..." << std::endl;
+        textList.InsertLine(LineType("Hello"));
+        std::cout << (textList.IsEmpty()? "List is empty" : "List is not empty") << std::endl;
+        std::cout << std::endl;
+
+        textList.GoToBottom();
+        textList.InsertLine(LineType("Hello2"));
+        textList.InsertLine(LineType("Hello3"));
+        textList.InsertLine(LineType("Hello4"));
+        textList.GoToTop();
+        std::cout << "List elements:" << std::endl;
+        while (textList.getCurrentLine()->getNext() != nullptr) {
+            textList.getCurrentLine()->print();
+            textList.incrementCurrentLine();
+        }
 }

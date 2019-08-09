@@ -12,4 +12,6 @@ add_executable(2_CPP_DataStructure_Implementations
         3_Stack_cpp/ArrayStack.cpp
         3_Stack_cpp/ArrayStack.h
         4_Queue_Cpp/ArrayQueue.h
-        4_Queue_Cpp/ArrayQueue.cpp)
+        4_Queue_Cpp/ArrayQueue.cpp
+        5_ListPlus/DoublyLinkedList.cpp
+        5_ListPlus/DoublyLinkedList.h)
